@@ -13,3 +13,47 @@ a {text-decoration: none
 &hover {
   color: white;
 }}
+
+.cocktail-name {
+  font-family: 'Pacifico', cursive;
+}
+
+
+.backdrop {
+    background-size: contain;
+    background-position: center;
+    margin: auto;
+    margin-top: 40px;
+    width: 60vw;
+}
+
+.backdrop.shibuya {
+}
+
+
+.knockout-text {
+    color: white;
+    border: 4px white solid;
+    mix-blend-mode: multiply;
+    font: bolder 4em monospace;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    transition: text-indent 0.5s;
+}
+
+.knockout-text:hover {
+    text-indent: 5px;
+    transition: text-indent 0.5s;
+}
+
+.knockout-text:hover::before {
+    display: inline-block;
+    content: "🍸";
+}
+
+.knockout-text.shibuya {
+    background-color: rgba(2, 22, 48, 1);
+    outline: 4px rgba(2, 22, 48, 1) solid;
+    font-size: 4em;
+}
