@@ -1,2 +1,18 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<div class="banner">
+  <h1 class="text-center">thirsty</h1>
+</div>
+
+<div class="card-deck d-flex flex-wrap">
+
+  <% @cocktails.each do |cocktail| %>
+
+  <div class="card card-image p-3 m-3" style="background-size: cover; background-image: url('https://picsum.photos/800/600?image=<%= cocktail.id + 100 %>'); min-width: 200px; height: 300px">
+    <!-- <%= image_tag "c1.jpg", alt: "alttext", class: "card-img-top mask rgba-white-slight", width: 300 %>
+    <img class="card-img-top" src=" " alt="Card image cap"> -->
+    <div class="card-body">
+      <h4 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+    </div>
+  </div>
+
+  <% end %>
+</div>

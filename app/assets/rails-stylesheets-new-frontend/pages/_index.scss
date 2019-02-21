@@ -1,2 +1,15 @@
 // Import page-specific CSS files here.
 @import "home";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
+
+body {font-family: 'Open Sans', sans-serif};
+
+h1, h2, h3 {
+  font-family: 'Pacifico', cursive;
+}
+
+a {text-decoration: none
+
+&hover {
+  color: white;
+}}
