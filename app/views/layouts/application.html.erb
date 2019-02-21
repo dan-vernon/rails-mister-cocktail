@@ -12,14 +12,17 @@
   </head>
 
   <body>
-    <div class="container">
-    <div class="navbar">
-      <span class="home-link"><%= link_to "Home", cocktails_path %></span>
-      <span class="add-cocktail"><%= link_to "Add a new cocktail", new_cocktail_path  %></span>
+    <div class="full-bg">
+
+    <div class="navbar-lewagon">
+        <span class="home-link brand"><%= link_to "Home", cocktails_path %></span>
+        <span class="add-cocktail navbar-lewagon-link"><%= link_to "Add a new cocktail", new_cocktail_path  %></span>
     </div>
+    <div class="container">
 
-    <%= yield %>
+      <%= yield %>
 
+    </div>
     </div>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag "application" %>

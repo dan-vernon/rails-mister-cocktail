@@ -1,8 +1,10 @@
-// Import page-specific CSS files here.
+// Import page-specific CSS e.
 @import "home";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
 
-body {font-family: 'Open Sans', sans-serif};
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $off-white;};
 
 h1, h2, h3 {
   font-family: 'Pacifico', cursive;
@@ -15,7 +17,7 @@ a {text-decoration: none
 }}
 
 .cocktail-name {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico' !important
 }
 
 
@@ -23,16 +25,18 @@ a {text-decoration: none
     background-size: contain;
     background-position: center;
     margin: auto;
-    margin-top: 40px;
-    width: 60vw;
+    margin-top: 0px;
+    width: 95%;
 }
 
 .backdrop.shibuya {
+  position: relative;
+  top: 8px;
 }
 
 
 .knockout-text {
-    color: white;
+    color: $off-white;
     border: 4px white solid;
     mix-blend-mode: multiply;
     font: bolder 4em monospace;
@@ -56,4 +60,8 @@ a {text-decoration: none
     background-color: rgba(2, 22, 48, 1);
     outline: 4px rgba(2, 22, 48, 1) solid;
     font-size: 4em;
+}
+
+.hero-image {
+  background-size: cover;height: 100vh;
 }

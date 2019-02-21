@@ -1,27 +1,28 @@
-<div class="hero-image" style="background-image: url();">
-    <div class="backdrop shibuya" style='background-image: url("https://rpsthecoder.github.io/img-repo/Shibuya%20by%20Alex%20Knight.jpg");'>
+<div class="hero-image" style="background-image: linear-gradient(
+    rgba(241,157,148,0.3),
+    rgba(200,200,200,0.1)),
+    url('https://picsum.photos/800/600?image=<%= @cocktail.id + 100 %>');">
+    <div class="backdrop shibuya" style='background-image: url("");'>
         <h1 class="knockout-text cocktail-name shibuya"><%= @cocktail.name %></h1>
-    </div>
-<div class="d-flex">
+      <div class="d-flex">
 
-  <ul>
 
-  <% @cocktail.doses.each do |d| %>
-  <strong><li>
-    <%= d.description %>
-    <%= d.ingredient.name %>
-    <%= link_to "DELETE", doses_destroy_url(d) %>
-  </li> </strong>
-  <% end %>
-  </ul>
-  <img src="https://picsum.photos/800/600?image=<%= @cocktail.id + 100 %>" alt="">
+        <% @cocktail.doses.each do |d| %>
+        <div class="card">
 
-</div>
+          <%= d.description %>
+          <%= d.ingredient.name %>
+          <%= link_to "DELETE", doses_destroy_url(d) %>
+        <% end %>
+        </div>
+
+      </div>
   <!-- form to go here -->
-
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-   <%= f.input :description %>
-   <%= f.association :ingredient %>
-   <%= f.button :submit %>
-  <% end %>
-</div>
+      <div>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+         <%= f.input :description %>
+         <%= f.association :ingredient %>
+         <%= f.button :submit %>
+        <% end %>
+      </div>
+    </div>
