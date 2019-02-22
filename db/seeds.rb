@@ -21,6 +21,8 @@ Ingredient.destroy_all
 Cocktail.destroy_all
 
 cocktail_names.each do |cocktail|
-  Cocktail.create(name: cocktail)
+  new_cock = Cocktail.new(name: cocktail)
+  new_cock.remote_photo_url = 'https://picsum.photos/600/800/?random'
+  new_cock.save
 end
 ingredients["drinks"].each_with_index { |k,v| Ingredient.create(name: k["strIngredient1"]) }
