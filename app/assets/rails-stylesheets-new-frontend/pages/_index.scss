@@ -4,7 +4,8 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: $off-white;};
+  color: $gray;
+  font-size: 1.5em};
 
 h1, h2, h3 {
   font-family: 'Pacifico', cursive;
@@ -18,11 +19,15 @@ a {text-decoration: none
 .banner {
   color: firebrick;
   h1 {
-    font-size: 10em;
+    font-size: 5em;
   };
   h2 {
-    font-size: 5em;
+    font-size: 3em;
   }
+}
+
+ul {
+  list-style:none
 }
 
 .full-bg {
