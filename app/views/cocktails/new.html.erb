@@ -1,11 +1,14 @@
 <div class="banner">
-  <h1>Mix me something new</h1>
+  <h2>Mix me something new</h2>
 </div>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name, label: "What's your new cocktail called?" %>
-  <%= f.input :photo, label: "Upload a cool photo" %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit "Mix me!" %>
+<div class="p-5 w-50 center-content bg-dark text-white rounded m-5">
 
-<% end %>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name, label: "What's your new cocktail called?" %>
+    <%= f.input :photo, label: "Upload a cool photo" %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.button :submit, "Mix me!" %>
+
+  <% end %>
+</div>
