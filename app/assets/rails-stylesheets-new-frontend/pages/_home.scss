@@ -1,22 +1,6 @@
 // Specific CSS for your home-page
 
-.banner {
 
-  h1 {
-    font-size: 10em;
-    color: firebrick;
-  }
-}
-
-.full-bg {
-  background-image: linear-gradient(
-    rgba(241,157,148,0.3),
-    rgba(239,242,226,1)),
-    url('banner.jpg');
-  background-size: cover;
-  height: 100vh;
-
-}
 .card {
   background-size: cover;
   min-width: 300px;

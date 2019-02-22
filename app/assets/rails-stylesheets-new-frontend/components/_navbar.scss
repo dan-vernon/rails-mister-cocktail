@@ -2,8 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
+  background: transparent;
   padding: 16px 24px;
+  overflow: hidden;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-scrolled {
+  background-color: rgba(200,200,200,0.1);
 }
 
 .navbar-lewagon .brand {
