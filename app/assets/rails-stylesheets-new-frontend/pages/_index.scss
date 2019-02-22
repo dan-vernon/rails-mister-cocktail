@@ -39,7 +39,7 @@ li:before {
   background-image: linear-gradient(
     rgba(241,157,148,0.3),
     rgba(239,242,226,1)),
-    url('banner.jpg');
+    asset-url('banner.jpg');
   background-size: cover;
   height: 100vh;}
 
