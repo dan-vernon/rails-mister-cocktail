@@ -29,8 +29,8 @@
       </div>
           <div class="p-5 w-50 center-content bg-dark text-white rounded m-3">
             <%= simple_form_for [@cocktail, @dose], class: "text-center" do |f| %>
-             <%= f.input :description, label: "Add a dose" %>
              <%= f.association :ingredient, label: "Pick an ingredient" %>
+             <%= f.input :description, label: "Add a dose", placeholder: "How much?" %>
              <%= f.button :submit, "Dose me up" %>
             <% end %>
           </div>
