@@ -27,8 +27,13 @@ a {text-decoration: none
 }
 
 ul {
-  list-style:none
+  list-style: none;
 }
+
+li:before {
+  content: "🍹";
+}
+
 
 .full-bg {
   background-image: linear-gradient(
