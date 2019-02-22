@@ -3,7 +3,9 @@
 </div>
 
 <%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo %>
+  <%= f.input :name, label: "What's your new cocktail called?" %>
+  <%= f.input :photo, label: "Upload a cool photo" %>
   <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit "Mix me!" %>
+
 <% end %>
