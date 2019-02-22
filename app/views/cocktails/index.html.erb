@@ -1,5 +1,5 @@
 <div class="banner">
-  <h1 class="text-center my-5 p-3">th<i class="fas fa-cocktail"></i>rsty</h1>
+  <h1 class="text-center my-5 p-3" style="size: 10em">th<i class="fas fa-cocktail"></i>rsty</h1>
 
   <div class="card-deck d-flex flex-wrap m-3 p-3">
 
@@ -9,7 +9,7 @@
     linear-gradient(
       rgba(0,0,0,0.5),
       rgba(0,0,0,0)),
-      url('https://picsum.photos/800/600?image=<%= cocktail.id + 100 %>')">
+      url('<%= cocktail.photo %>'); background-size: cover">
       <div class="card-body">
         <div class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
         <div class="card-body"></div>

@@ -17,12 +17,12 @@ a {text-decoration: none
   color: white;
 }}
 .banner {
-  color: firebrick;
+  color: #5D7CA4;
   h1 {
-    font-size: 5em;
+    font-size: 6em;
   };
   h2 {
-    font-size: 3em;
+    font-size: 4em;
   }
 }
 
@@ -33,6 +33,12 @@ ul {
 li:before {
   content: "🍹";
 }
+
+// .doses-form {
+//   h3 {
+//     color: $gray;
+//   }
+// }
 
 
 .full-bg {

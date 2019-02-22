@@ -3,7 +3,6 @@ require 'json'
 
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 ingredients = JSON.parse(open(url).read)
-ingredients["drinks"].each_with_index { |k,v| Ingredient.create(name: k["strIngredient1"]) }
 
 cocktail_names = [
   'Tequila Mockingbird',
@@ -24,3 +23,4 @@ Cocktail.destroy_all
 cocktail_names.each do |cocktail|
   Cocktail.create(name: cocktail)
 end
+ingredients["drinks"].each_with_index { |k,v| Ingredient.create(name: k["strIngredient1"]) }
