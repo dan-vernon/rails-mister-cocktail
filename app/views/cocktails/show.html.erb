@@ -1,38 +1,41 @@
-<!-- <div class="hero-image" style="background-image: linear-gradient(
-    rgba(241,157,148,0.3),
-    rgba(200,200,200,0.1)),
-    url('https://picsum.photos/800/600?image=<%= @cocktail.id + 100 %>');">
- -->
+<div class="hero-image rounded text-center" style="background-image: linear-gradient(
+    rgba(241,240,148,0.8),
+    rgba(200,200,200,0.5)),
+    url('<%= @cocktail.photo %>'); position: relative; top: -50px; margin: 0 auto; width: 50vw">
+
   <div class="banner py-3">
 
-  <h2 class="cocktail-name"><%= @cocktail.name %></h2>
+  <h2 class="cocktail-name p-3"><%= @cocktail.name %></h2>
  </div>
+ <hr>
       <div class="d-flex justify-content-between">
-        <div class="doses-form">
+        <div class="doses-form border-right">
 
-        <ul style="style="background-image: linear-gradient(rgba(241,157,148,1), rgba(200,200,200,0.1))">
+          <h3>Ingredients</h3>
+          <hr>
+          <ul style="style="background-image: linear-gradient(rgba(241,157,148,1), rgba(200,200,200,0.1))" class="p-3">
 
-                <% @cocktail.doses.each do |d| %>
-                <li class="list-item">
+                  <% @cocktail.doses.each do |d| %>
+                  <li class="list-item">
 
-                  <%= d.description %> | <%= d.ingredient.name %>
-                  <%= link_to "<i class='far fa-trash-alt'></i>".html_safe, dose_path(d), method: :delete %>
-                  <%= link_to(dose_path) do %>
+                    <%= d.description %>: <%= d.ingredient.name %>
+                    <%= link_to "<small><i class='far fa-trash-alt'></i></small>".html_safe, dose_path(d), method: :delete %>
+                    <%= link_to(dose_path) do %>
+                    <% end %>
                   <% end %>
-                <% end %>
-                </li>
+                  </li>
 
-        </ul>
-        <hr>
-          <div class="p-5">
-            <%= simple_form_for [@cocktail, @dose] do |f| %>
+          </ul>
+      </div>
+          <div class="p-5 w-50 center-content bg-dark text-white rounded m-3">
+            <%= simple_form_for [@cocktail, @dose], class: "text-center" do |f| %>
              <%= f.input :description, label: "Add a dose" %>
              <%= f.association :ingredient, label: "Pick an ingredient" %>
-             <%= f.button :submit %>
+             <%= f.button :submit, "Dose me up" %>
             <% end %>
           </div>
       </div>
 
-<img src="https://picsum.photos/800/600?image=<%= @cocktail.id + 100 %>" alt="" style="filter:sepia(50%)" width="50%" height="50%" class="rounded">
-      </div>
+<!-- <img src="https://picsum.photos/800/600?image=<%= @cocktail.id + 100 %>" alt="" style="filter:sepia(50%)" width="50%" height="50%" class="rounded">
+ -->      </div>
       </div>
